@@ -37,23 +37,23 @@ public class Inregration {
 			Random rand = new Random();
 			int  AdjetiveNumber = rand.nextInt(4) + 1;
 			String Adjetive = null;
-				switch (AdjetiveNumber) {
-	            		case 1: Adjetive = "amatory";
-	            		    break;
-	            		case 2: Adjetive = "adamant";
-	            				break;
-	            		case 3: Adjetive = "baleful";
-	            				break;
-	            		case 4: Adjetive = "fastidious";
-	            				break;
-	                     }
-				//changing int to String
-			String numberAsString = Integer.toString(AdjetiveNumber);
-			System.out.println("Now displaying " + Adjetive + " Which was generated from the number " + numberAsString);
-			//using substring to get the first letter of the adjetive
-			System.out.println("The adjetive starts with the letter " + Adjetive.substring(0, 1));
-			System.out.println("dividing two intergers will always result in a whole number that is rounded down");
-			System.out.println("The reason is becasue int is a data type that is a whole number so it cuts off the decimal value");
-			System.out.println("For example 9 divided by 4 equals 2.25 but if we divede with intergers the answer would be " + (9/4));
+			    switch (AdjetiveNumber) {
+			        case 1: Adjetive = "amatory";
+			            break;
+	            	case 2: Adjetive = "adamant";
+	            	    break;
+	            	case 3: Adjetive = "baleful";
+	            			break;
+	            	case 4: Adjetive = "fastidious";
+	            			break;
+			     }
+		//changing int to String
+		String numberAsString = Integer.toString(AdjetiveNumber);
+		System.out.println("Now displaying " + Adjetive + " Which was generated from the number " + numberAsString);
+		//using substring to get the first letter of the adjetive
+		System.out.println("The adjetive starts with the letter " + Adjetive.substring(0, 1));
+		System.out.println("dividing two intergers will always result in a whole number that is rounded down");
+		System.out.println("The reason is becasue int is a data type that is a whole number so it cuts off the decimal value");
+		System.out.println("For example 9 divided by 4 equals 2.25 but if we divede with intergers the answer would be " + (9/4));
 	}
 }
