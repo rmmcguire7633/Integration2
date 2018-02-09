@@ -46,6 +46,8 @@ class Adjetive {
                 break;
             case 17: adjetive = "comely";
                 break;
+            case 18: adjetive = "dilatory";
+                break;
         }
         return adjetive;
     }
