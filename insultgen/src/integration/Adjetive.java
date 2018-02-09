@@ -5,7 +5,7 @@ import java.util.Random;
 class Adjetive {
    static int getRandom() {
         Random rand = new Random();
-        int  adjetiveNumber = rand.nextInt(12) + 1;
+        int  adjetiveNumber = rand.nextInt(17) + 1;
         return adjetiveNumber;   
     }
     static String getAdjetive () {
@@ -35,6 +35,16 @@ class Adjetive {
             case 11: adjetive = "billious";
                 break;
             case 12: adjetive = "dowdy";
+                break;
+            case 13: adjetive = "corpulent";
+                break;
+            case 14: adjetive = "calamitous";
+                break;
+            case 15: adjetive = "defamatory";
+                break;
+            case 16: adjetive = "didactic";
+                break;
+            case 17: adjetive = "comely";
                 break;
         }
         return adjetive;
