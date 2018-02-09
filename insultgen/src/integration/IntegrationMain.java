@@ -3,13 +3,14 @@
 
 package integration;
 
-import java.util.Random;
 import java.util.Scanner;
 
-public class Inregration {
+public class IntegrationMain {
 
-	public static void main(String[] args) {
-		System.out.println("Welcome to the thunder dome of super crazy sentences. Please enter the number of the subject you want to construct a sentence with");		
+	private static final int adjetiveNumber = 0;
+
+    public static void main(String[] args) {
+		System.out.println("Welcome to the thunder dome of super fancy adjectives. Please enter the number of the subject you want to construct an adjective with");		
 		Scanner input = new Scanner (System.in);
 		System.out.print("1. Person, 2. Animal, 3. Country, 4. Answer to the meaning of life, or 5. Music:");
 		// variables are essentially an object. The most common type of varibales are primative data types. these include int, double, byte, short, long, float, char, and boolean. 
@@ -34,26 +35,15 @@ public class Inregration {
 				}
 				
 			}
-			Random rand = new Random();
-			int  AdjetiveNumber = rand.nextInt(4) + 1;
-			String Adjetive = null;
-			    switch (AdjetiveNumber) {
-			        case 1: Adjetive = "amatory";
-			            break;
-	            	case 2: Adjetive = "adamant";
-	            	    break;
-	            	case 3: Adjetive = "baleful";
-	            			break;
-	            	case 4: Adjetive = "fastidious";
-	            			break;
-			     }
-		//changing int to String
-		String numberAsString = Integer.toString(AdjetiveNumber);
-		System.out.println("Now displaying " + Adjetive + " Which was generated from the number " + numberAsString);
+			String adjetive = Adjetive.getAdjetive();
+			int adjetiveNumber = Adjetive.getRandom();
+        //changing int to String
+		String numberAsString = Integer.toString(adjetiveNumber);
+		System.out.println("Now displaying " + adjetive + " Which was generated from case " + numberAsString);
 		//using substring to get the first letter of the adjetive
-		System.out.println("The adjetive starts with the letter " + Adjetive.substring(0, 1));
+	System.out.println("The adjetive starts with the letter " + adjetive.substring(0, 1));
 		System.out.println("dividing two intergers will always result in a whole number that is rounded down");
 		System.out.println("The reason is becasue int is a data type that is a whole number so it cuts off the decimal value");
-		System.out.println("For example 9 divided by 4 equals 2.25 but if we divede with intergers the answer would be " + (9/4));
+		System.out.println("For example 9 divided by 4 equals " + (9.00/4.00) + " but if we divide with intergers the answer would be " + (9/4));
 	}
 }
