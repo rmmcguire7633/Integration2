@@ -33,9 +33,9 @@ public class IntegrationMain {
 				}
 				
 			}
-			//method being called on line 37 with () as argument 
+			   //method being called on line 37 with () as argument 
 		String adjetive = Adjetive.getAdjetive();
-		  //method being called on line 39 with () as argument
+		    //method being called on line 39 with () as argument
 		int adjetiveNumber = Adjetive.getRandom();
         //changing int to String
 		String numberAsString = Integer.toString(adjetiveNumber);
