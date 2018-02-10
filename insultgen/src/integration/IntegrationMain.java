@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class IntegrationMain {
 
 	public static void main(String[] args) {
-		System.out.println("Welcome to the thunder dome of super fancy adjectives.");		
+		System.out.println("Welcome to the thunder dome of super fancy adjective.");		
 		// Variables are memory that contain a data value.Variables are used to store information. for example we could have a box and assigning that box's width would be creating a variable for that box. The most common type of variables are primitive data types. these include int, double, byte, short, long, float, char, and boolean. 
 		// int is a whole number with a minimum value of -231 and a maximum value of 230.
 		// double is a number rounded to two decimal places
