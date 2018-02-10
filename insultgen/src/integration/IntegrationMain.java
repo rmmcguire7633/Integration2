@@ -9,8 +9,8 @@ public class IntegrationMain {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to the thunder dome of super fancy adjectives. Please enter the number of the subject you want to construct an adjective with");		
-		Scanner input = new Scanner (System.in);
-		System.out.print("1. Person, 2. Animal, 3. Country, 4. Answer to the meaning of life, or 5. Music:");
+		
+		
 		// Variables are memory that contain a data value.Variables are used to store information. for example we could have a box and assigning that box's width would be creating a variable for that box. The most common type of variables are primitive data types. these include int, double, byte, short, long, float, char, and boolean. 
 		// int is a whole number with a minimum value of -231 and a maximum value of 230.
 		// double is a number rounded to two decimal places
@@ -20,20 +20,8 @@ public class IntegrationMain {
 		//float is like a double but is used if a large array needs to be saved 
 		// boolean has only two value true or false
 		// char has a minimum value of '\u0000' (or 0) and a maximum value of '\uffff' (or 65,535 inclusive).
-		int Userinput = input.nextInt();
-			while(Userinput < 1 || Userinput > 5)
-			{
-				if (Userinput < 1) {
-					System.out.println("Invalid entry: A grade school child could follow these instructions, please try again or go back to school");
-					Userinput = input.nextInt();
-				}
-				else if (Userinput > 5) {
-					System.out.println("Invalid entry: I have seen mice follow better instructions");
-					Userinput = input.nextInt();
-				}
-				
-			}
-			   //method being called on line 37 with () as argument 
+//		int Userinput = input.nextInt();
+//			  //method being called on line 37 with () as argument 
 		String adjetive = Adjetive.getAdjetive();
 		    //method being called on line 39 with () as argument
 		int adjetiveNumber = Adjetive.getRandom();
