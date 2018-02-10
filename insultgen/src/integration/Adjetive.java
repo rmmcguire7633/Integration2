@@ -3,11 +3,22 @@ package integration;
 import java.util.Random;
 
 class Adjetive {
-   static int getRandom() {
-        Random rand = new Random();
-        int  adjetiveNumber = rand.nextInt(17) + 1;
-        return adjetiveNumber;   
-    }
+   public static int getMin (int number1, int number2) {
+       int min;
+       if (number1 > number2) {
+           min = number2;
+       }
+       else {
+           min = number1;
+       }
+       return min;
+   }
+   
+   static int getRandom () {
+       Random rand = new Random();
+       int  adjetiveNumber = rand.nextInt(17) + 1;
+       return adjetiveNumber;   
+   }
     static String getAdjetive () {
     int adjetiveNumber = Adjetive.getRandom();
     String adjetive = null;
