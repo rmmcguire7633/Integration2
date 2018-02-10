@@ -1,13 +1,12 @@
 package integration;
 
 public class Account {
-    private String name; // instance variable
-    // method to set the name in the object
+    private String name;
+    //line 6 is a method header. The parameter is String name.
     public void setName(String name) {
-        this.name = name; // store the name
+        this.name = name; 
     }
-   // method to retrieve the name from the object
     public String getName() {
-    return name; // return value of name to caller
+    return name;
     }
  }

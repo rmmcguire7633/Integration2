@@ -33,39 +33,47 @@ public class IntegrationMain {
 				}
 				
 			}
-			String adjetive = Adjetive.getAdjetive();
-			int adjetiveNumber = Adjetive.getRandom();
+			//method being called on line 37 with () as argument 
+		String adjetive = Adjetive.getAdjetive();
+		  //method being called on line 39 with () as argument
+		int adjetiveNumber = Adjetive.getRandom();
         //changing int to String
 		String numberAsString = Integer.toString(adjetiveNumber);
 		System.out.println("Now displaying " + adjetive + " Which was generated from case " + numberAsString);
-		//using substring to get the first letter of the adjetive
+		    //using substring to get the first letter of the adjetive
 		System.out.println("The adjetive starts with the letter " + adjetive.substring(0, 1));
+		    //using split
+		String dog = "the dog is crazy ";
+		String[] dog1 = dog.split(" ");
+		System.out.println(dog1[0] + " " + dog1[3] + " " + dog1[1]);
+		    //using index of
+		System.out.println("the index of i in the String dog is " + dog.indexOf('i'));
+		    //explaining math operations
 		System.out.println("dividing two intergers will always result in a whole number that is rounded down");
 		System.out.println("The reason is becasue int is a data type that is a whole number so it cuts off the decimal value");
+		    //using double data type
 		double nine = 9;
 		double four = 4;
 		System.out.println("For example 9 divided by 4 equals " + (nine/four) + " but if we divide with intergers the answer would be " + (9/4));
+		    //using boolean data type
 		boolean coolbeans = true;
     System.out.println("Beans are cool. This statement is " + coolbeans);
     System.out.println("To muliply data or numbers use the * key. For example 9 multiplied by 4 is " + (9*4));
     System.out.println("The % key is used to perform modulo. Module means the remainder of two numbers divided. For example the remainder of 9 divided by 4 is " + (9 % 4));
     System.out.println("The - is used to subtract data types and +is used to add data types. For example 9 -4 is " + (9-4) + " and 9 + 4 is " + (9+4));
-    //using methods
+        //using methods
     int number1 = 12;
     int number2 = 10;
+        //calling method with the parameter of number1 and number2.
     int result = Adjetive.getMin(number1, number2);
-    System.out.println(result);
+    System.out.println(result);       
     Account myAccount = new Account();
     Scanner input1 = new Scanner(System.in);
-    // display initial value of name (null)
-    System.out.println("Initial name is: " + myAccount.getName());
-    // prompt for and read name
     System.out.println("Please enter the name:");
-    String theName = input1.nextLine(); // read a line of text
-    myAccount.setName(theName); // put theName in myAccount
-    System.out.println(); // outputs a blank line
-    // display the name stored in object myAccount
+    String theName = input1.nextLine();
+        //storing entered data into the Account class
+    myAccount.setName(theName); 
+        // display the name stored in object myAccount also calling method with () parameters or no parameters.
     System.out.println("Name in object myAccount is: " + myAccount.getName());
-    System.out.println("hey");
-    }
+	}
 }
