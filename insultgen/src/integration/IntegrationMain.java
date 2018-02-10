@@ -58,14 +58,14 @@ public class IntegrationMain {
     Account myAccount = new Account();
     Scanner input1 = new Scanner(System.in);
     // display initial value of name (null)
-    System.out.printf("Initial name is: %s%n%n", myAccount.getName());
+    System.out.println("Initial name is: " + myAccount.getName());
     // prompt for and read name
     System.out.println("Please enter the name:");
     String theName = input1.nextLine(); // read a line of text
     myAccount.setName(theName); // put theName in myAccount
     System.out.println(); // outputs a blank line
     // display the name stored in object myAccount
-    System.out.printf("Name in object myAccount is:%n%s%n", myAccount.getName());
-    
+    System.out.println("Name in object myAccount is: " + myAccount.getName());
+    System.out.println("hey");
     }
 }
