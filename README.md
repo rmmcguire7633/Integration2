@@ -1,2 +1,2 @@
 # Integration
-This is a program that go over topics from cop2600
+This is a program that goes over topics from cop2600
