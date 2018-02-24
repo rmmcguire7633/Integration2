@@ -1,5 +1,5 @@
 //Ryan McGuire integration project
-//this program is going to generate a random adjective and will display multiple programming skills
+//this program will generate a random adjective and will display multiple programming skills
 
 package integration;
 
@@ -16,23 +16,6 @@ public class IntegrationMain {
      System.out.println("Invalid entry, please try again");
       userChoice = input.nextLine(); 
     }
-    // Variables are memory that contain a data value.Variables are used to
-    // store information. for example we could have a box and assigning that
-    // box's width would be creating a variable for that box. The most
-    // common type of variables are primitive data types. these include int,
-    // double, byte, short, long, float, char, and boolean.
-    // int is a whole number with a minimum value of -231 and a maximum
-    // value of 230.
-    // double is a number rounded to two decimal places
-    // byte has minimum value of -128 and a maximum value of 127
-    // (inclusive).
-    // short has a minimum value of -32,768 and a maximum value of 32,767
-    // (inclusive)
-    // long has a minimum value of -263 and a maximum value of 263-1
-    // float is like a double but is used if a large array needs to be saved
-    // boolean has only two value true or false
-    // char has a minimum value of '\u0000' (or 0) and a maximum value of
-    // '\uffff' (or 65,535 inclusive).
     if (userChoice.equals("1")) {
       doMathStuff();
     }
@@ -41,8 +24,7 @@ public class IntegrationMain {
     }
     else {
       doClassStuff();
-    }
-    
+    }    
   }
   private static void doClassStuff() {
  // using methods
@@ -60,6 +42,12 @@ public class IntegrationMain {
     // display the name stored in object myAccount also calling method with
     // () parameters or no parameters.
     System.out.println("Name in object myAccount is: " + myAccount.getName());
+    //new object made with value passed to it through a constructor
+    Account sample = new Account ("John", 34, 8675309.65);
+    System.out.println("We created another object named sample in the Account");
+    System.out.println("The name in the account is " + sample.getUserName());
+    System.out.println("The age of the user in the account is " + sample.getAge());
+    System.out.println("The wealth value of the user is $" + sample.getWealthValue());
   }
 
   private static void doStringStuff() {
@@ -107,6 +95,22 @@ public class IntegrationMain {
     System.out.println(
         "The - is used to subtract data types and + is used to add data types. For example 9 -4 is "
             + (9 - 4) + " and 9 + 4 is " + (9 + 4));
-
   }
 }
+//Variables are memory that contain a data value.Variables are used to
+// store information. for example we could have a box and assigning that
+// box's width would be creating a variable for that box. The most
+// common type of variables are primitive data types. these include int,
+// double, byte, short, long, float, char, and boolean.
+// int is a whole number with a minimum value of -231 and a maximum
+// value of 230.
+// double is a number rounded to two decimal places
+// byte has minimum value of -128 and a maximum value of 127
+// (inclusive).
+// short has a minimum value of -32,768 and a maximum value of 32,767
+// (inclusive)
+// long has a minimum value of -263 and a maximum value of 263-1
+// float is like a double but is used if a large array needs to be saved
+// boolean has only two value true or false
+// char has a minimum value of '\u0000' (or 0) and a maximum value of
+// '\uffff' (or 65,535 inclusive).

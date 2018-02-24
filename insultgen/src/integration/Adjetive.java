@@ -4,7 +4,7 @@ package integration;
 import java.util.Random;
 
 class Adjetive {
-  // line 7 is a method header. the parameters are int number1 and int number2
+  // Method header. the parameters are int number1 and int number2
   public static int getMin(int number1, int number2) {
     int min;
     if (number1 > number2) {
@@ -15,14 +15,14 @@ class Adjetive {
     return min;
   }
 
-  // line 18 is a method header. The parameters are () or no parameters
+  // Method header. The parameters are () or no parameters
   static int getRandom() {
     Random rand = new Random();
     int adjetiveNumber = rand.nextInt(17) + 1;
     return adjetiveNumber;
   }
 
-  // line 24 is a method header. the parameters are () or no parameters
+  //Method header. the parameters are () or no parameters
   static String getAdjetive() {
     int adjetiveNumber = Adjetive.getRandom();
     String adjetive = null;
