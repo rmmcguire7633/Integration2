@@ -9,10 +9,10 @@ public class IntegrationMain {
 
   public static void main(String[] args) {
     System.out.println("Please enter the number of the subject you would like to explore");
-    System.out.println("1 for Math, 2 for Strings (also gives a random adjetive), 3 for Classes and Objects");
+    System.out.println("1 for Math, 2 for Strings (also gives a random adjetive), 3 for Classes and Objects, 4 for Arrays, 5 for Stringbuilder");
     Scanner input = new Scanner(System.in);
     String userChoice = input.nextLine();
-    while (!userChoice.equals("1") && !userChoice.equals("2") && !userChoice.equals("3")) {
+    while (!userChoice.equals("1") && !userChoice.equals("2") && !userChoice.equals("3") && !userChoice.equals("4") && !userChoice.equals("5")) {
      System.out.println("Invalid entry, please try again");
       userChoice = input.nextLine(); 
     }
@@ -22,9 +22,14 @@ public class IntegrationMain {
     else if (userChoice.equals("2")) {
       doStringStuff();
     }
-    else {
+    else if (userChoice.equals("3")) {
+      doClassStuff();
+      }
+    else if (userChoice.equals("4")) {
       doArrayStuff();
-      //doClassStuff();
+    }
+    else {
+      doStringBuilder();
     }
   }
   private static void doClassStuff() {
@@ -73,7 +78,10 @@ public class IntegrationMain {
         .println("the index of i in the String dog is " + dog.indexOf('i'));
   }
   private static void doArrayStuff() {
-    
+    int [] forEachLoop = {1, 2, 3, 4, 5};
+    for (int s:forEachLoop) {
+      System.out.println(s);
+    }
     Scanner userData = new Scanner(System.in);
     System.out.println("To calculate expenses on employees, please enter the number of employees");
     int size = userData.nextInt();
@@ -117,7 +125,29 @@ public class IntegrationMain {
       System.out.println("The employee, " + specificName + ", was not found.");
     }
   }
-    private static void doMathStuff() {
+  private static void doStringBuilder() {
+    StringBuilder str = new StringBuilder("tuts ");
+    System.out.println("string = " + str);    
+    str.append('A');
+    System.out.println("After append = " + str);
+    str = new StringBuilder("abcd ");
+    System.out.println("string = " + str);   
+    str.append('!');
+    System.out.println("After append = " + str);
+    
+    StringBuilder delete = new StringBuilder("Your mom's dog is cool");
+    System.out.println("string = " + delete);
+    delete.delete(4, 10);
+    System.out.println("After deletion = " + delete);
+    
+    StringBuilder reverse = new StringBuilder("india");
+    System.out.println("string = " + reverse);
+    System.out.println("reverse = " + reverse.reverse());
+    reverse = new StringBuilder("malayalam");
+    System.out.println("string = " + reverse);
+    System.out.println("reverse = " + reverse.reverse());
+ }
+  private static void doMathStuff() {
     // explaining math operations
     System.out.println(
         "dividing two integers will always result in a whole number that is rounded down");
@@ -159,3 +189,4 @@ public class IntegrationMain {
 // boolean has only two value true or false
 // char has a minimum value of '\u0000' (or 0) and a maximum value of
 // '\uffff' (or 65,535 inclusive).
+//static means belonging to the class, and not the instances of the class.
