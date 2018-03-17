@@ -23,8 +23,9 @@ public class IntegrationMain {
       doStringStuff();
     }
     else {
-      doClassStuff();
-    }    
+      doArrayStuff();
+      //doClassStuff();
+    }
   }
   private static void doClassStuff() {
  // using methods
@@ -43,7 +44,7 @@ public class IntegrationMain {
     // () parameters or no parameters.
     System.out.println("Name in object myAccount is: " + myAccount.getName());
     //new object made with value passed to it through a constructor
-    Account sample = new Account ("John", 34, 8675309.65);
+    Account sample = new Account ("John Bonjovie", 56, 8675309.65);
     System.out.println("We created another object named sample in the Account");
     System.out.println("The name in the account is " + sample.getUserName());
     System.out.println("The age of the user in the account is " + sample.getAge());
@@ -71,8 +72,52 @@ public class IntegrationMain {
     System.out
         .println("the index of i in the String dog is " + dog.indexOf('i'));
   }
-  
-  private static void doMathStuff() {
+  private static void doArrayStuff() {
+    
+    Scanner userData = new Scanner(System.in);
+    System.out.println("To calculate expenses on employees, please enter the number of employees");
+    int size = userData.nextInt();
+    double [] employeeSalary = new double [size];
+    Scanner name = new Scanner(System.in);
+    String [] employeeName = new String [size];
+    for (int count = 1; count < employeeName.length +1; count++) {
+      System.out.println("Enter employee " + count + "'s" + " first and last name.");
+      employeeName [count -1] = name.nextLine();
+      System.out.println("Enter the annual salary for " +  employeeName [count -1]);
+      employeeSalary [count -1] = userData.nextDouble();
+    }
+    System.out.println("Empoyee\t\t\t\tSalary");
+    for (int count = 0; count < employeeSalary.length; count++) {     
+      System.out.println(employeeName[count] + "\t\t\t$" + employeeSalary[count]);
+    }
+    double minValue = employeeSalary[0];
+    String minName = employeeName[0];
+    for (int count = 1; count< employeeSalary.length; count++) {
+      if(employeeSalary[count] < minValue) {
+        minValue = employeeSalary[count];
+        minName = employeeName[count];
+      }
+    }
+    System.out.println("The lowest paid employee is " + minName + " and they are payed $" + minValue + " annualy");
+    double sum = 0;
+    for(int count = 0; count < employeeSalary.length; count++) {
+      sum += employeeSalary[count];
+    }
+    System.out.println("The total expense for employees is $" + sum);
+    System.out.println("Enter the name of the employee for their annual salary");
+    String specificName = name.nextLine();
+    boolean check = false;
+    for (int count = 0; count < employeeName.length; count++) {
+      if (employeeName[count].equals(specificName)) {
+        System.out.println("Employee " + employeeName[count] + " was at element " + count + " and their salary is " + employeeSalary[count]);
+        check = true;
+      }
+     }
+    if (check == false) {
+      System.out.println("The employee, " + specificName + ", was not found.");
+    }
+  }
+    private static void doMathStuff() {
     // explaining math operations
     System.out.println(
         "dividing two integers will always result in a whole number that is rounded down");
