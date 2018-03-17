@@ -40,3 +40,4 @@ public class Account {
     this. wealthValue = wealthValue;
   } 
  }
+//Ryan McGuire
