@@ -37,7 +37,7 @@ public class IntegrationMain {
     int number1 = 12;
     int number2 = 10;
     // calling method with the parameter of number1 and number2.
-    int result = Adjetive.getMin(number1, number2);
+   int result = Adjetive.getMin(number1, number2);
     System.out.println(result);
     Account myAccount = new Account();
     Scanner input1 = new Scanner(System.in);

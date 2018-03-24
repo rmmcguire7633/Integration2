@@ -1,4 +1,25 @@
-eNumber;
+//Ryan McGuire
+package integration;
+
+import java.util.Random;
+
+class Adjetive {
+  // Method header. the parameters are int number1 and int number2
+  public static int getMin(int number1, int number2) {
+    int min;
+    if (number1 > number2) {
+      min = number2;
+    } else {
+      min = number1;
+    }
+    return min;
+  }
+
+  // Method header. The parameters are () or no parameters
+  static int getRandom() {
+    Random rand = new Random();
+    int adjetiveNumber = rand.nextInt(17) + 1;
+    return adjetiveNumber;
   }
 
   //Method header. the parameters are () or no parameters
@@ -64,4 +85,3 @@ eNumber;
     return adjetive;
   }
 }
-//Ryan Mcguire
