@@ -17,7 +17,7 @@ public class IntegrationMain {
       userChoice = input.nextLine(); 
     }
     if (userChoice.equals("1")) {
-      doMathStuff();
+      doInhertianceStuff();
     }
     else if (userChoice.equals("2")) {
       doStringStuff();
@@ -117,7 +117,7 @@ public class IntegrationMain {
     boolean check = false;
     for (int count = 0; count < employeeName.length; count++) {
       if (employeeName[count].equals(specificName)) {
-        System.out.println("Employee " + employeeName[count] + " was at element " + count + " and their salary is " + employeeSalary[count]);
+        System.out.println("Employee " + employeeName[count] + " was at element " + count + " and their salary is $" + employeeSalary[count]);
         check = true;
       }
      }
@@ -170,6 +170,13 @@ public class IntegrationMain {
     System.out.println(
         "The - is used to subtract data types and + is used to add data types. For example 9 -4 is "
             + (9 - 4) + " and 9 + 4 is " + (9 + 4));
+  }
+  public static void doInhertianceStuff() {
+    student john = new student("john", "male");
+    System.out.println(john.getName());
+    
+    
+    
   }
 }
 //Variables are memory that contain a data value.Variables are used to

@@ -1,7 +1,7 @@
 //Ryan McGuire
 package integration;
 
-public class Account {
+class Account {
   private String name;
 
   // method header. The parameter is String name.
