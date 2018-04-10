@@ -84,15 +84,49 @@ public class IntegrationMain {
     }
     Scanner userData = new Scanner(System.in);
     System.out.println("To calculate expenses on employees, please enter the number of employees");
-    int size = userData.nextInt();
+    int size = 1;
+    boolean correctInput = true;
+    while (correctInput == true) {
+      try {
+        size = userData.nextInt();
+        correctInput = false;
+        }
+      catch (Exception e) {
+        System.out.println("System could not recognize input, please enter the number of employees");      
+        userData.next();
+      }
+    }
     double [] employeeSalary = new double [size];
+    
     Scanner name = new Scanner(System.in);
+    
     String [] employeeName = new String [size];
+    
     for (int count = 1; count < employeeName.length +1; count++) {
       System.out.println("Enter employee " + count + "'s" + " first and last name.");
-      employeeName [count -1] = name.nextLine();
+      correctInput = true;
+      while (correctInput == true) {
+        try {
+          employeeName [count -1] = name.nextLine();
+          correctInput = false;
+        }
+        catch (Exception e) {
+          System.out.println("System could not recognize input, please enter the number of the employees");
+          userData.next();
+        }
+      }
       System.out.println("Enter the annual salary for " +  employeeName [count -1]);
-      employeeSalary [count -1] = userData.nextDouble();
+      correctInput = true;
+      while (correctInput == true) {
+        try {
+          employeeSalary [count -1] = userData.nextDouble();
+          correctInput = false;
+        }
+        catch (Exception e) {
+          System.out.println("System could not recognize input, please enter the salary of " + employeeName [count -1]);
+          userData.next();
+        }
+      }
     }
     System.out.println("Empoyee\t\t\t\tSalary");
     for (int count = 0; count < employeeSalary.length; count++) {     
@@ -174,7 +208,7 @@ public class IntegrationMain {
   public static void doInhertianceStuff() {
     student john = new student("john", "male");
     System.out.println(john.getName());
-    
+    john.override();
     
     
   }

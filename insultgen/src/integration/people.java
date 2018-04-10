@@ -1,3 +1,5 @@
+//Ryan McGuire
+//This is my superclass
 package integration;
 
 class people {
@@ -19,6 +21,9 @@ class people {
  }
  public String getSex() {
    return sex;
+ }
+ public void override() {
+   System.out.println("The of the person is ");
  }
   
   
