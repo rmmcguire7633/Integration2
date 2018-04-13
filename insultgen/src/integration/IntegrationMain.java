@@ -2,7 +2,7 @@
 //this program will generate a random adjective and will display multiple programming skills
 
 package integration;
-//aaa
+
 import java.util.Scanner;
 
 public class IntegrationMain {
@@ -85,18 +85,20 @@ public class IntegrationMain {
     Scanner userData = new Scanner(System.in);
     System.out.println("To calculate expenses on employees, please enter the number of employees");
     int size = 1;
-    boolean correctInput = true;
-    while (correctInput == true) {
-      //aa
-    	try {
+    boolean correctInput = false;
+    while (correctInput == false) {
+     try {
         size = userData.nextInt();
-        correctInput = false;
+        correctInput = true;
         }
-      catch (Exception e) {
+     catch (Exception e) {
         System.out.println("System could not recognize input, please enter the number of employees");      
         userData.next();
       }
     }
+    correctInput = false;
+   
+    
     double [] employeeSalary = new double [size];
     
     Scanner name = new Scanner(System.in);
@@ -162,7 +164,7 @@ public class IntegrationMain {
   }
   private static void doStringBuilder() {
     StringBuilder str = new StringBuilder("tuts ");
-    System.out.println("string = " + str);    
+    System.out.println("string = " + str);
     str.append('A');
     System.out.println("After append = " + str);
     str = new StringBuilder("abcd ");
