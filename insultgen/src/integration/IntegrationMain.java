@@ -87,7 +87,8 @@ public class IntegrationMain {
     int size = 1;
     boolean correctInput = true;
     while (correctInput == true) {
-      try {
+      //aa
+    	try {
         size = userData.nextInt();
         correctInput = false;
         }

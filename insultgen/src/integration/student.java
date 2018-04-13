@@ -1,7 +1,7 @@
 //Ryan McGuire
 package integration;
 //using inheritance where class is the subclass and people is the super class
-//Using private variables inside the people class to store data from the student class
+//Sharing the private variables from class people to class student
 class student extends people { 
   public student (String name, String sex){
      super(name, sex);
