@@ -8,7 +8,7 @@ class student extends people {
    }
    //the method override in student class is overriding the method override in people class
    public void override() {
-     System.out.println("The name of the student is " + getName());
+     System.out.println("The name of the student is Bill Nye");
    }
 
 }

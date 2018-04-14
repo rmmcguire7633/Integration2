@@ -25,7 +25,4 @@ class people {
  public void override() {
    System.out.println("The of the person is ");
  }
-  
-  
-
 }
