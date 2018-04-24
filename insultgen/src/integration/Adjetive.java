@@ -1,4 +1,5 @@
 //Ryan McGuire
+
 package integration;
 
 import java.util.Random;
@@ -80,6 +81,8 @@ class Adjetive {
         break;
       case 18:
         adjetive = "dilatory";
+        break;
+      default:
         break;
     }
     return adjetive;

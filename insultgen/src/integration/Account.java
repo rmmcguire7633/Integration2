@@ -1,4 +1,5 @@
 //Ryan McGuire
+
 package integration;
 
 class Account {
@@ -12,32 +13,38 @@ class Account {
   public String getName() {
     return name;
   }
+  
   private String userName;
   private int age;
   private double wealthValue;
+  
   public String getUserName() {
     return userName;
   }
+  
   public int getAge() {
     return age;
   }
+  
   public double getWealthValue() {
     return wealthValue;
   }
-  Account (){
-    
+  
+  Account(){}
+  
+  Account(String userName) {
+    this.userName = userName;
   }
-  Account (String userName){
-    this.userName =userName;
-  }
-  Account (String userName, int age){
+  
+  Account(String userName, int age) {
     this.userName = userName;
     this.age = age; 
   }
-  Account (String userName, int age, double wealthValue){
+  
+  Account(String userName, int age, double wealthValue) {
     this.userName = userName;
     this.age = age;
     this. wealthValue = wealthValue;
   } 
- }
+}
 //Ryan McGuire
