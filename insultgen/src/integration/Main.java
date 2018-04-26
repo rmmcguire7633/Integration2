@@ -39,16 +39,16 @@ public class Main {
       userChoice = input.nextLine(); 
     }
     
-    input.close();
+    
     
     if (userChoice.equals("1")) {
       doMathStuff();
     } else if (userChoice.equals("2")) {
       doStringStuff();
     } else if (userChoice.equals("3")) {
-      doClassStuff();
+      doClassStuff(input);
     } else if (userChoice.equals("4")) {
-      doArrayStuff();
+      doArrayStuff(input);
     } else if (userChoice.equals("5")) {
       doStringBuilder();
     } else if (userChoice.equals("6")) {
@@ -58,6 +58,7 @@ public class Main {
     } else {
       doLambdaStuff();
     }
+    input.close();
   }
   
   /**
@@ -65,7 +66,7 @@ public class Main {
    * This is user choice "3".
    */
   
-  private static void doClassStuff() {
+  private static void doClassStuff(Scanner input1) {
  
     int number1 = 12;
     int number2 = 10;
@@ -75,7 +76,6 @@ public class Main {
     System.out.println(result);
     
     Account myAccount = new Account();
-    Scanner input1 = new Scanner(System.in);
     System.out.println("Please enter the name:");
     String theName = input1.nextLine();
     input1.close();
@@ -133,14 +133,14 @@ public class Main {
    * Will ask user for employee information that includes name and salary.
    */
   
-  private static void doArrayStuff() {
+  private static void doArrayStuff(Scanner userData) {
     int [] forEachLoop = {1, 2, 3, 4, 5};
     for (int s:forEachLoop) {
       System.out.println(s);
     }
     
     //determines how many employees there are.
-    Scanner userData = new Scanner(System.in);
+    
     System.out.println("To calculate expenses on employees, please enter the number of employees");
     int size = 1;
     boolean correctInput = false;
@@ -217,7 +217,6 @@ public class Main {
     //finds an employee entered by the user.
     System.out.println("Enter the name of the employee for their annual salary");
     String specificName = userData.nextLine();
-    userData.close();
     boolean check = false;
     for (int count = 0; count < employeeName.length; count++) {
       if (employeeName[count].equals(specificName)) {
