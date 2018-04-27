@@ -48,7 +48,7 @@ public class Main {
     } else if (userChoice.equals("3")) {
       doClassStuff(input);
     } else if (userChoice.equals("4")) {
-      doArrayStuff(input);
+      doArrayStuff();
     } else if (userChoice.equals("5")) {
       doStringBuilder();
     } else if (userChoice.equals("6")) {
@@ -67,8 +67,9 @@ public class Main {
    */
   
   private static void doClassStuff(Scanner input1) {
- 
-    int number1 = 12;
+    
+    //casting demonstrated.
+    int number1 = (int) 12.2323;
     int number2 = 10;
     // calling method with the parameter of number1 and number2.
     // method use to find the lowest int value between two numbers.
@@ -120,7 +121,8 @@ public class Main {
     System.out.println("The string dog is equal to " + dog);
     String[] dog1 = dog.split(" ");
     String dogMod = (dog1[0] + " " + dog1[3] + " " + dog1[1]);
-    System.out.println("When we split the dog sting into 0, 3, and 1 we get " + dogMod);
+    System.out.println("When we split the dog sting into 0, 3, and 1 we "
+        + "get " + dogMod);
     
     // using index of
     System.out
@@ -133,57 +135,59 @@ public class Main {
    * Will ask user for employee information that includes name and salary.
    */
   
-  private static void doArrayStuff(Scanner userData) {
+  private static void doArrayStuff() {
     int [] forEachLoop = {1, 2, 3, 4, 5};
     for (int s:forEachLoop) {
       System.out.println(s);
     }
+    Scanner userData = new Scanner(System.in);
     
-    //determines how many employees there are.
-    
-    System.out.println("To calculate expenses on employees, please enter the number of employees");
+    //determines how many employees the user designates.
+    System.out.println("To calculate expenses on employees, please enter the "
+        + "number of employees");
     int size = 1;
-    boolean correctInput = false;
-    while (correctInput == false) {
+    boolean correctInput = true;
+    while (correctInput == true) {
       try {
         size = userData.nextInt();
-        correctInput = true;
+        correctInput = false;
       } catch (Exception e) {
-        System.out.println("System could not recognize input, please enter"
-            + " the number of employees");      
+        System.out.println("System could not recognize input, please enter "
+            + "the number of employees");      
         userData.next();
       }
     }
-        
+    
+    Scanner name = new Scanner(System.in);
     double [] employeeSalary = new double [size];
     String [] employeeName = new String [size];
     
-    //Gets the employees names from the user.
+    //gets the employees names from the user in the format of first name, 
+    //last name from the user.
     for (int count = 1; count < employeeName.length + 1; count++) {
-      System.out.println("Enter employee " + count + "'s" + " first and last name.");
-      correctInput = false;
-      while (correctInput == false) {
+      System.out.println("Enter employee " + count + "'s" + " first and last "
+          + "name.");
+      correctInput = true;
+      while (correctInput == true) {
         try {
-          employeeName [count - 1] = userData.nextLine();
-          correctInput = true;
+          employeeName [count - 1] = name.nextLine();
+          correctInput = false;
         } catch (Exception e) {
-          System.out.println("System could not recognize input, "
-              + "please enter the employee name again.");
+          System.out.println("System could not recognize input, please enter "
+              + "the number of the employees");
           userData.next();
         }
       }
-      
-      //gets the annual salary of the employee from the user.
-      System.out.println("Enter the annual salary for "
-            +  employeeName [count - 1]);
-      correctInput = false;
-      while (correctInput == false) {
+      System.out.println("Enter the annual salary for " 
+          +  employeeName [count - 1]);
+      correctInput = true;
+      while (correctInput == true) {
         try {
           employeeSalary [count - 1] = userData.nextDouble();
-          correctInput = true;
+          correctInput = false;
         } catch (Exception e) {
-          System.out.println("System could not recognize input,"
-              + " please enter the salary of " + employeeName [count - 1]);
+          System.out.println("System could not recognize input, please "
+              + "enter the salary of " + employeeName [count - 1]);
           userData.next();
         }
       }
@@ -195,7 +199,7 @@ public class Main {
       System.out.println(employeeName[count] + "\t\t\t$" + employeeSalary[count]);
     }
     
-    //displays the lowest payed employee
+    //displays the lowest payed employee.
     double minValue = employeeSalary[0];
     String minName = employeeName[0];
     for (int count = 1; count < employeeSalary.length; count++) {
@@ -204,31 +208,33 @@ public class Main {
         minName = employeeName[count];
       }
     }
-    System.out.println("The lowest paid employee is " + minName  
-        + " and they are payed $" + minValue + " annualy");
+    System.out.println("The lowest paid employee is " + minName + " and "
+        + "they are payed $" + minValue + " annualy");
     
-    //gets the total expense of employee salary.
+    //displays the total expense for employee salary.
     double sum = 0;
     for (int count = 0; count < employeeSalary.length; count++) {
       sum += employeeSalary[count];
     }
     System.out.println("The total expense for employees is $" + sum);
     
-    //finds an employee entered by the user.
+    //finds an employee entered by the user and displays the employees salary.
     System.out.println("Enter the name of the employee for their annual salary");
-    String specificName = userData.nextLine();
+    String specificName = name.nextLine();
     boolean check = false;
     for (int count = 0; count < employeeName.length; count++) {
       if (employeeName[count].equals(specificName)) {
-        System.out.println("Employee " + employeeName[count] 
-            + " was at element " + count + " and their salary is $" 
-            + employeeSalary[count]);
+        System.out.println("Employee " + employeeName[count] + " was at"
+            + " element " + count + " and their salary"
+                + " is $" + employeeSalary[count]);
         check = true;
       }
     }
     if (check == false) {
       System.out.println("The employee, " + specificName + ", was not found.");
     }
+    name.close();
+    userData.close();
   }
   
   /**
@@ -302,7 +308,7 @@ public class Main {
    *This is user choice "7".
    */
   
-  public static void doInheritanceStuff() {
+  private static void doInheritanceStuff() {
     //Polymorphism is the ability of an object to take on many forms.
     //this is an example of dynamic polymophism.
     People [] physicsClass = new People[2];
@@ -318,7 +324,7 @@ public class Main {
    * method used to perform lambda operations.
    */
   
-  public static void doLambdaStuff() {
+  private static void doLambdaStuff() {
     //a Lambda expression lets you pass functionality as an argument to another method
     //for example what action is to be taken when someone clicks a button
     //a predicate is a boolean value function of one argument
@@ -337,7 +343,8 @@ public class Main {
    * @param condition This represents what is to be found out of the array list.
    */
   
-  public static void printFilter(List<Integer> number, Predicate<Integer> condition) {
+  private static void printFilter(List<Integer> number, Predicate<Integer> 
+      condition) {
     for (Integer num : number) {
       if (condition.test(num)) {
         System.out.println(num);
@@ -346,10 +353,11 @@ public class Main {
   }
   
   /**
+   * is user choice "6".
    * Is used to get the local date and time.
    */
   
-  public static void getTimeDate() {
+  private static void getTimeDate() {
     LocalDate currentDate = LocalDate.now();
     LocalTime currentTime = LocalTime.now();
     System.out.println("currentDate: " + currentDate);
